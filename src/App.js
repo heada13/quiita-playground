@@ -16,11 +16,11 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { BrowserRouter, NavLink } from 'react-router-dom';
 import Main from './components/Main';
-import { styled } from '@mui/material/styles';
+import { styled as muiStyled } from '@mui/material/styles';
 
 const drawerWidth = 240;
 
-const StyledMain = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
+const StyledMain = muiStyled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({
     flexGrow: 1,
     padding: theme.spacing(3),
@@ -38,7 +38,7 @@ const StyledMain = styled('main', { shouldForwardProp: (prop) => prop !== 'open'
   }),
 );
 
-const StyledAppBar = styled(AppBar, {
+const StyledAppBar = muiStyled(AppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
 })(({ theme, open }) => ({
   transition: theme.transitions.create(['margin', 'width'], {
@@ -55,7 +55,7 @@ const StyledAppBar = styled(AppBar, {
   }),
 }));
 
-const DrawerHeader = styled('div')(({ theme }) => ({
+const DrawerHeader = muiStyled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   padding: theme.spacing(0, 1),
