@@ -24,7 +24,9 @@ const Second = () => {
       .then(response => response.json())
       .then(json => setData(json))
     }
-    getJson()
+    setTimeout(() => {
+      getJson()
+    }, "1000")
   },[])
 
 
